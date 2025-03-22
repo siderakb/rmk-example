@@ -1,6 +1,8 @@
-# RMK 
+# RMK Example
 
-RMK is a feature-rich and easy-to-use keyboard firmware.
+[RMK](https://github.com/HaoboGu/rmk) is a feature-rich and easy-to-use keyboard firmware.
+
+`nRF52840`
 
 ## uf2 support
 
@@ -9,13 +11,17 @@ If you’re using the Adafruit_nRF52_Bootloader (pre-installed on the nice!nano)
 Follow these steps to generate and flash the .uf2 firmware with RMK:
 
 1. Get `cargo-make` tool:
+
    ```shell
    cargo install --force cargo-make
    ```
+
 2. Compile RMK and generates .uf2 firmware:
+
    ```shell
    cargo make uf2 --release
    ```
+
 3. Flash
 
    - Put your board into bootloader mode. A USB drive will appear on your computer.
@@ -29,7 +35,7 @@ For nRF52840, there are several widely used UF2 bootloaders, they require slight
 
 First, you should check the used softdevice version of your bootloader. Enter bootloader mode, there will be an USB driver shown in your computer. Open `INFO_UF2.TXT` in the USB driver, the content of `INFO_UF2.TXT` should be like:
 
-```
+```txt
 UF2 Bootloader 0.6.0 lib/nrfx (v2.0.0) lib/tinyusb (0.10.1-41-gdf0cda2d) lib/uf2 (remotes/origin/configupdate-9-gadbb8c7)
 Model: nice!nano
 Board-ID: nRF52840-nicenano
